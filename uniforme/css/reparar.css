@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.5;
+}
+
+:root {
+    --color-primario: #004080;
+    --color-dos: #ffd500;
+    --color-detalles: #ffffff;
+    --color-textooscuro: #222;
+    --texto-claro: #666;
+
+}
+
+.header {
+    background-color: var(--color-primario);
+    color: #ffd500;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0px;
+    z-index: 1;
+    flex-wrap: nowrap;
+
+}
+
+
+.header__auth {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.auth__link {
+    color: var(--color-dos);
+    text-decoration: none;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease;
+}
+
+.auth__link--highlight:hover {
+    background-color: var(--color-dos);
+    color: #004080;
+}
+
+.auth__link--highlight {
+    background-color: var(--color-text);
+    padding: 0.4rem 0.7rem;
+    border-radius: 7px;
+}
+
+.auth__link--borde {
+    margin-top: 0.4rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.nav__links {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5rem 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav__links:hover {
+    color: var(--color-dos);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1rem;
+
+    }
+
+    .header__auth {
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.5rem;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        max-width: 100%;
+        padding: 0 1rem;
+        margin: 10px 0;
+    }
+
+    .search-bar input {
+        font-size: 0.9rem;
+        padding: 8px;
+        border-radius: 8px 0 0 8px;
+    }
+
+    .search-button {
+        padding: 6px 10px;
+        border-radius: 0 8px 8px 0;
+    }
+
+    .search-button img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.reparacion {
+    background-color:var(--color-primario);
+    padding: 30px;
+    border-radius: 50px;
+    max-width: 600px;
+    margin: 40px auto;
+    color: #f1f1f1;
+}
+
+.reparacion h1 {
+    text-align: center;
+    color:var(--color-detalles) ;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--color-dos);
+    color:var(--color-primario);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background-image: url('borrR.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.form-container {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: var(--color-primario);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    background: linear-gradient(to right, #004080, #1e1e1e);
+    color: #f1f1f1;
+    padding: 3.5rem 2rem 2rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 2rem;
+}
+
+.footer__logo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0;
+    text-transform: lowercase;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.15);
+}
+
+.footer__logo span {
+    color: #fdd835;
+}
+
+.footer__logo-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-shadow: inherit;
+}
+
+.footer__logo-link:hover {
+    color: #fdd835;
+}
+
+.footer__slogan {
+    font-size: 1rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+    font-style: italic;
+    border-top: 1px solid #fdd835;
+    padding-top: 0.5rem;
+}
+
+/* Enlaces */
+.footer__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__links li {
+    margin: 0.5rem 0;
+}
+
+.footer__links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer__links a:hover {
+    color: #fdd835;
+    padding-left: 6px;
+}
+
+/* Explora estilizado */
+.footer__links h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fdd835;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer__links h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 50%;
+    height: 3px;
+    background-color: #fdd835;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.footer__links h4:hover::after {
+    width: 100%;
+}
+
+/* Contacto */
+.footer__contact a {
+    color: #f1f1f1;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer__contact a:hover {
+    color: #fdd835;
+}
+
+/* Línea separadora */
+.footer__divider {
+    border: none;
+    border-top: 1px solid #777;
+    margin: 1rem 0;
+}
+
+.footer__contact .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.footer__contact img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.footer__contact img:hover {
+    transform: scale(1.2);
+}
+
+/* TikTok sin filtro invertido */
+.footer__contact--icon {
+    filter: none !important;
+}
+
+/* Parte inferior del footer */
+.footer__bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer__policies {
+    margin-top: 0.5rem;
+}
+
+.footer__policies a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 0.8rem;
+    font-size: 0.85rem;
+}
+
+.footer__policies a:hover {
+    color: #fdd835;
+}
